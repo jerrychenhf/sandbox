@@ -37,6 +37,7 @@ RUN apt-get update && \
         openjdk-8-jdk-headless \
         procps \
         sudo \
+        libc6 \
         wget && \
     /var/lib/dpkg/info/ca-certificates-java.postinst configure && \
     rm -rf /var/lib/apt/lists/*
