@@ -60,6 +60,8 @@ RUN conda env create --file /tmp/env.yml && \
     rm -f /tmp/env.yml && \
     rm -rf $HOME/.cache/pip/*
 
+RUN conda install -n intel -c intel scipy=1.5.2 --force-reinstall
+
 ENV USE_DAAL4PY_SKLEARN=YES
 
 # Set an environment variable used by Databricks to decide which conda environment to activate by default.
